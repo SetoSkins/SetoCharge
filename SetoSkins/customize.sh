@@ -1,5 +1,6 @@
 file2=$(ls /sys/class/power_supply/battery/*charge_current /sys/class/power_supply/battery/current_max /sys/class/power_supply/battery/thermal_input_current 2>>/dev/null|tr -d '\n')
-if [ ! -f "$file2" ]; then
+file="/sys/class/power_supply/battery/constant_charge_current_max"
+if [ ! -f "$file2" ] -o [ ! -f "$file" ]; then
 echo "- 不支持你的设备"
 exit 1
 fi
@@ -57,7 +58,6 @@ fi
 echo "- 配置在模块根目录"
 echo "- 请卸载一切有关于改电流大小的模块 否则模块不会生效"
 sleep 5
-coolapkTesting=$(pm list package | grep -w 'com.coolapk.market')
-if [[ $coolapkTesting != "" ]] && [ ! -d "/data/adb/modules/SetoCharge/" ]; then
-	am start -d 'coolmarket://u/5562122' >/dev/null 2>&1
+if [ ! -d "/data/adb/modules/SetoCharge/" ]; then
+	am start -a 'android.intent.action.VIEW' -d 'https://hub.cdnet.run/' >/dev/null 2>&1
 fi
