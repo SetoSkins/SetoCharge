@@ -1,4 +1,4 @@
-id=SetoCharge
-name=类旁路充电
+id=SetoScreen
+name=自定义息屏
 author=菜卡@SetoSkins
-description=类旁路充电 | log和配置在/data/adb/modules/SetoCharge
+description=自定义App永不息屏（Oled最大为10分钟）
