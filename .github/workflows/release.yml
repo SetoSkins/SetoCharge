@@ -20,6 +20,7 @@ jobs:
           echo "version=${{ env.version }}" >>$GITHUB_WORKSPACE/${{ env.ModuleFolderName }}/module.prop
           echo "versionCode=${{ env.versionCode }}" >>$GITHUB_WORKSPACE/${{ env.ModuleFolderName }}/module.prop
           cd $GITHUB_WORKSPACE/${{ env.ModuleFolderName }}
+          rm -rf $GITHUB_WORKSPACE/${{ env.ModuleFolderName }}/工口本
           zip -q -r SetoScreen.zip *
           mv $GITHUB_WORKSPACE/${{ env.ModuleFolderName }}/SetoScreen.zip "$GITHUB_WORKSPACE"/GithubRelease/SetoScreen.zip
           cd "$GITHUB_WORKSPACE"
@@ -29,7 +30,7 @@ jobs:
         uses: ncipollo/release-action@main
         with:
           artifacts: ${{ github.workspace }}/GithubRelease/*
-          name: "应用自定义最大亮屏时长 ${{ env.version }}"
+          name: "Seto温控 ${{ env.version }}"
           tag: "${{ env.version }}"
           bodyFile: "${{ github.workspace }}/file.log"
           allowUpdates: true
