@@ -30,7 +30,7 @@ jobs:
         uses: ncipollo/release-action@main
         with:
           artifacts: ${{ github.workspace }}/GithubRelease/*
-          name: "类旁路充电 ${{ env.version }}"
+          name: "Seto温控 ${{ env.version }}"
           tag: "${{ env.version }}"
           bodyFile: "${{ github.workspace }}/file.log"
           allowUpdates: true
