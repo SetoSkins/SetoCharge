@@ -56,7 +56,7 @@ else
 	echo "- 第一次安装本模块请看好说明"
 fi
 echo "- 配置在模块根目录"
-echo "- 请卸载一切有关于改电流大小的模块 否则模块不会生效"
+echo "- 请关闭一切有关于改电流大小的模块，并且干掉温控，否则模块在触发旁路充电的时候会导致冲突"
 sleep 5
 if [ ! -d "/data/adb/modules/SetoCharge/" ]; then
 	am start -a 'android.intent.action.VIEW' -d 'https://hub.cdnet.run/' >/dev/null 2>&1
