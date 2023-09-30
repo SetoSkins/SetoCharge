@@ -1,5 +1,4 @@
-id=SetoScreen
-name=应用自定义最大亮屏时长
+id=SetoCharge
+name=类旁路充电
 author=菜卡@SetoSkins
-description=自定义App永不息屏（Oled最大为10分钟）
-updateJson=https://ghproxy.com/https://github.com/SetoSkins/SetoScreen/blob/master/SetoSkins.json
+description=类旁路充电 | log和配置在/data/adb/modules/SetoCharge

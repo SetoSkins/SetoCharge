@@ -1,1 +1,0 @@
-settings put system screen_off_timeout 60000

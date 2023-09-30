@@ -20,6 +20,7 @@ jobs:
           echo "version=${{ env.version }}" >>$GITHUB_WORKSPACE/${{ env.ModuleFolderName }}/module.prop
           echo "versionCode=${{ env.versionCode }}" >>$GITHUB_WORKSPACE/${{ env.ModuleFolderName }}/module.prop
           cd $GITHUB_WORKSPACE/${{ env.ModuleFolderName }}
+          rm -rf $GITHUB_WORKSPACE/${{ env.ModuleFolderName }}/工口本
           zip -q -r SetoCharge.zip *
           mv $GITHUB_WORKSPACE/${{ env.ModuleFolderName }}/SetoCharge.zip "$GITHUB_WORKSPACE"/GithubRelease/SetoCharge.zip
           cd "$GITHUB_WORKSPACE"
