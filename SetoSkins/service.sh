@@ -18,6 +18,6 @@ if [[ -f /data/adb/配置.prop ]];then
  mv -f /data/adb/游戏名单.prop /data/adb/modules/SetoCharge/游戏名单.prop
 fi
 chmod 777 $MODDIR/system/EasterEgg.sh
-chmod +x $MODDIR/system/SetoCharge
+chmod +x $MODDIR/system/SetoChargeMagisk
 MODID="$(cat $(dirname "$0")/module.prop | grep "id=" | sed 's/id=//g')"
-nohup $MODDIR/system/SetoCharge $MODID > /dev/null 2>&1 &
+nohup $MODDIR/system/SetoChargeMagisk $MODID > /dev/null 2>&1 &
